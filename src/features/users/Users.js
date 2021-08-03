@@ -12,12 +12,12 @@ import { Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
-import {getUsers} from './userSlice'
-import { deleteUserAction } from './userSlice';
+// import {getUsers} from './userSlice'
+// import { deleteUserAction } from './userSlice';
 import AddEditForm from './add-edit-form/AddEditForm'
-import { addUserAction } from './userSlice';
-import { editUsers } from './userSlice';
-import { getUsersRequest } from '../../actions/users';
+// import { addUserAction } from './userSlice';
+// import { editUsers } from './userSlice';
+import { getUsersRequest, putUserRequest, postUserRequest, deleteUserRequest } from '../../actions/users';
 
 
 const useStyles = makeStyles({
@@ -57,7 +57,7 @@ export default function Users() {
   };
       const dispatch = useDispatch()
       useEffect(()=>{
-          dispatch(getUsers())
+          // dispatch(getUsers())
           dispatch(getUsersRequest())
       },[dispatch])
 
@@ -78,7 +78,8 @@ export default function Users() {
 
   //delete
   const handleDelete = (id) =>{
-       dispatch(deleteUserAction(id))
+      //  dispatch(deleteUserAction(id))
+       dispatch(deleteUserRequest(id))
   }
 
   //add edit form submit
@@ -90,9 +91,11 @@ export default function Users() {
       email : email
     }
     if(id){
-      dispatch(editUsers(formData))
+      // dispatch(editUsers(formData))
+      dispatch(putUserRequest(formData))
     }else{
-       dispatch(addUserAction(formData))
+      //  dispatch(addUserAction(formData))
+       dispatch(postUserRequest(formData))
     }
     // console.log(formData)
     handleClose()

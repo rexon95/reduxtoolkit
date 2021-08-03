@@ -9,7 +9,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Divider from '@material-ui/core/Divider';
 import { getComments } from './commentSlice';
 import { Link } from 'react-router-dom';
-import { getUsers } from '../users/userSlice';
+// import { getUsers } from '../users/userSlice';
+import { getUsersRequest } from '../../actions/users';
 
 
 
@@ -25,7 +26,8 @@ export default function PostsList() {
         const classes = useStyles();
         const dispatch = useDispatch()
         useEffect(()=>{
-             dispatch(getUsers())
+            //  dispatch(getUsers())
+                dispatch(getUsersRequest())
              dispatch(getPosts())
            
         },[dispatch])

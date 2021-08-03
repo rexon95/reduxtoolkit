@@ -1,7 +1,8 @@
 import React,{useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
-import { getUsers } from '../users/userSlice'
+// import { getUsers } from '../users/userSlice'
+import { getUsersRequest } from '../../actions/users'
 import AlbumList from './AlbumList'
 import { getAlbums } from './albumSlice'
 import Details  from './Details'
@@ -13,7 +14,8 @@ export default function AlbumsPhotos() {
 
     useEffect(()=>{
         dispatch(getAlbums())
-        dispatch(getUsers())
+        // dispatch(getUsers())
+        dispatch(getUsersRequest())
     },[dispatch])
     
     return (

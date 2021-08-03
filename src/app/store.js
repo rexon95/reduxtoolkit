@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
-import thunk from 'redux-thunk'
+// import thunk from 'redux-thunk'
 import userReducer from '../features/users/userSlice'
 import postReducer from '../features/posts-comments/postSlice'
 import commentReducer from '../features/posts-comments/commentSlice'
@@ -19,6 +19,6 @@ export const store = configureStore({
             albumsData : albumReducer,
             photoData : photoReducer
         },
-        middleware : [thunk,sagaMiddleware]
+        middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware)
     })
 sagaMiddleware.run(rootSaga)

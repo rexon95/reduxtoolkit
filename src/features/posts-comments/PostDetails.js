@@ -69,7 +69,7 @@ export default function PostDetails(props) {
             <div className={classesaccordian.root}>
                      {comments.map((comment,i)=>{
                         
-                         return  <Accordion>
+                         return  <Accordion key={i}>
                                         <AccordionSummary
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1a-content"

@@ -7,9 +7,9 @@ import {store} from './app/store'
 import {Provider} from 'react-redux'
 import {BrowserRouter} from 'react-router-dom'
 
-console.log(store.subscribe(()=>{
-  console.log(store.getState())
-}))
+// console.log(store.subscribe(()=>{
+//   console.log(store.getState())
+// }))
 
 ReactDOM.render(
       <Container>
