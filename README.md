@@ -1,7 +1,7 @@
 # This App is built to demonstrate my expertise on redux toolkit, redux saga and material UI and Thunk.
 
 # NOTE : 
-  This app uses both thunk and saga together. Saga is implimented for a single page crud. i.e freatures/users section.  
+  This app uses both thunk and saga together. Saga is implimented for a single page crud. i.e freatures/users section. The rest of the features use thunk.  
   
 # App test creds : 
 username : rex@gmail.com
