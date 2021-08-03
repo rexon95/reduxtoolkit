@@ -6,3 +6,6 @@
 # App test creds : 
 username : rex@gmail.com
 pass : 123456
+
+# App url : 
+https://reduxtoolkit.herokuapp.com/
